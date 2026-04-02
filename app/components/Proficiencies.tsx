@@ -49,9 +49,9 @@ export default function Proficiencies() {
             <div className="text-white/50 leading-7">
               <p>VS Code</p>
               <p>Figma</p>
+              <p>Android Studio</p>
+              <p>Adobe Illustrator</p>
               <p>Postman</p>
-              <p>Notion</p>
-              <p>Stripe API</p>
             </div>
           </motion.div>
 
@@ -71,6 +71,12 @@ export default function Proficiencies() {
               <p>Next.js</p>
               <p>TypeScript</p>
               <p>TailwindCSS</p>
+              <p>Laravel</p>
+              <p>Flutter</p>
+              <p>Java</p>
+              <p>XML</p>
+              <p>Kotlin</p>
+              <p>Jetpack compose</p>
             </div>
           </motion.div>
         </div>

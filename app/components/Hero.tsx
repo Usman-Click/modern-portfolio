@@ -5,7 +5,7 @@ import SectionTitle from "./SectionTitle";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center px-8 bg-[#0a0a0a] overflow-hidden">
+    <section id="hero" className="relative mt-24 sm:mt-0 min-h-screen flex items-center justify-center px-8 bg-[#0a0a0a] overflow-hidden">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: `radial-gradient(#ffffff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
@@ -45,7 +45,7 @@ export default function Hero() {
             <div className="grid grid-cols-[100px_1fr] gap-x-12 gap-y-2 pb-8 border-b border-white/5">
               <p className="text-white font-semibold text-lg">About</p>
               <div className="space-y-1 text-white/50 text-lg leading-tight">
-                <p>Full-Stack Developer</p>
+                <p>Software Engineer</p>
                 <p>Based in Berlin</p>
                 <p>5+ Years Experience</p>
                 <p className="text-white/80">Open to Work</p>
@@ -54,8 +54,8 @@ export default function Hero() {
 
             {/* Bio Paragraph */}
             <p className="text-white/40 text-lg leading-relaxed mt-8">
-              When I’m not coding, you’ll find me on the tennis court, 
-              gaming, or sharing a good meal with friends.
+              When I’m not coding, I’m building startup ideas, exploring AI
+              systems, or working on premium UI experiences.
             </p>
           </div>
         </motion.div>

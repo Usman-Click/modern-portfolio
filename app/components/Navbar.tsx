@@ -55,7 +55,7 @@ export default function Navbar() {
 
         <div className="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between">
           <p className="text-sm text-white/60 tracking-wide">
-            Get to know Usman
+            Usman's Resume
           </p>
 
           <button
