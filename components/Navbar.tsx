@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <>
       {/* Navbar */}
-      <div className="fixed top-0 left-0 right-0 z-50  bg-black ">
+      <div className="fixed top-0 left-0 right-0 z-50  bg-black  max-w-5xl mx-auto ">
         {/* scroll progress */}
         <div
           className="h-[2px] bg-gradient-to-r from-black via-white to-black transition-all"
