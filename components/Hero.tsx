@@ -77,7 +77,7 @@ export default function Hero() {
               <p className="text-white font-semibold text-lg">About</p>
               <div className="space-y-1 text-white/50 text-lg leading-tight">
                 <p>Software Engineer</p>
-                <p>Based in Berlin</p>
+                <p>Based in Nigeria</p>
                 <p>5+ Years Experience</p>
                 <p className="text-white/80">Open to Work</p>
               </div>
