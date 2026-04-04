@@ -17,7 +17,7 @@ const education = [
 
 export default function Education() {
   return (
-    <section className="relative py-28 px-8 bg-[#0a0a0a]">
+    <section className="relative py-28 px-8 bg-[#0a0a0a]" id="education">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         
         {/* Left: Sticky Title */}

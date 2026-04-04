@@ -25,7 +25,7 @@ const work = [
 
 export default function Work() {
   return (
-    <section className="relative py-28 px-8 ">
+    <section className="relative py-28 px-8 " id="work">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         
         {/* Left: Sticky Title */}

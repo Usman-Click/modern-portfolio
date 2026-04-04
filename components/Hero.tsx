@@ -32,7 +32,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <SectionTitle title="Usman Adamu" />
+          <div className="text-center sm:text-start"><SectionTitle title="Usman Adamu H." /></div>
         </motion.div>
 
         {/* Right Side: Profile & Details */}
@@ -64,7 +64,7 @@ export default function Hero() {
             />
             <div className="relative w-40 h-52 rounded-3xl overflow-hidden border border-white/10 shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
               <img
-                src="/me.webp"
+                src="/images/me.webp"
                 alt="Profile"
                 className="w-full h-full object-cover  transition-all duration-700"
               />

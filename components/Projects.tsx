@@ -8,7 +8,7 @@ import { projects } from "@/lib/data";
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 px-6 sm:px-12 ">
+    <section id="projects" className="relative py-24 px-6 sm:px-12 " >
       {/* --- GRID BACKGROUND PATTERN --- */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-20"

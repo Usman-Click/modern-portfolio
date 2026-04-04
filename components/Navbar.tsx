@@ -8,9 +8,9 @@ import clsx from "clsx";
 const links = [
   { name: "About", href: "#hero" },
   { name: "Proficiencies", href: "#proficiencies" },
-  { name: "Projects", href: "#projects" },
   { name: "Work", href: "#work" },
   { name: "Education", href: "#education" },
+  { name: "Projects", href: "#projects" },
   { name: "Certificates", href: "#certificates" },
   { name: "Contact", href: "#contact" },
 ];
@@ -54,9 +54,13 @@ export default function Navbar() {
         />
 
         <div className="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between">
-          <p className="text-sm text-white/60 tracking-wide">
+          <a
+            href="/docs/cv.pdf"
+            target="_blank"
+            className="text-sm text-white/60 tracking-wide"
+          >
             Usman's Resume
-          </p>
+          </a>
 
           <button
             onClick={() => setOpen(true)}
@@ -103,7 +107,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={clsx(
-                    "text-4xl md:text-6xl font-semibold tracking-tight transition",
+                    "text-4xl font-semibold tracking-tight transition",
                     active === link.href
                       ? "text-white"
                       : "text-white/30 hover:text-white/80",

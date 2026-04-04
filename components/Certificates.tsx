@@ -18,7 +18,7 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <section className="relative py-28 px-8">
+    <section className="relative py-28 px-8" id="certificates">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -38,7 +38,7 @@ export default function Certificates() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: idx * 0.05 }}
-              className="border border-white/10 rounded-2xl p-6 bg-white/5"
+              className="border-b border-white/10  p-6"
             >
               <h3 className="text-lg font-semibold text-white">{cert.name}</h3>
               <p className="text-white/50 mt-2">{cert.org}</p>
