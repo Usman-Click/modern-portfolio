@@ -46,15 +46,20 @@ export const projects = [
   {
     id: "scholaraid",
     name: "Scholaraid",
-    desc: "Scholarship managment platform",
-    icon: "/images/cap.jpg  ",
-    image: "/images/cap-hero.jpg  ",
+    desc: "A cloud-native, AI-assisted scholarship management platform designed to bridge the gap between students and providers[cite: 8, 55].",
+    icon: "/images/cap.jpg",
+    image: "/images/cap-hero.jpg",
     year: "2026",
     //liveUrl: "https://scholaraid.com/",
-    type: "Web App",
+    type: "Cross-Platform App (Mobile & Web)",
     role: "UX Designer & Developer",
-    objective: "Eliminate task-management fatigue by providing a stripped-back interface that focuses only on what needs to be done next.",
-    process: "Leveraged local-first principles to ensure the app is lightning fast and works perfectly offline.",
-    features: ["Keyboard-first Navigation", "Focus Mode", "Offline Sync", "Dynamic Priority Sorting"],
-  },
+    objective: "To design and implement a scalable platform that simplifies scholarship discovery for students and streamlines manual workflows for providers[cite: 14, 19].",
+    process: "Adopted an agile, iterative methodology using a Firebase-backed architecture to support real-time synchronization and cloud-native scalability[cite: 25, 26, 30].",
+    features: [
+      "AI-Assisted Eligibility Matching [cite: 18, 32]",
+      "Centralized Scholarship Tracking [cite: 17]",
+      "Automated Provider Dashboards [cite: 31, 39]",
+      "Real-time Push Notifications [cite: 40]"
+    ]
+  }
 ];
