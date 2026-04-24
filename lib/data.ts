@@ -1,15 +1,15 @@
 export const projects = [
   {
 
-    id: "veyrix",
-    name: "Veyrix",
+    id: "datasabi",
+    name: "DataSabi",
     desc: "Reinventing VTU and financial technology",
     icon: "/images/data.png",
     image: "/images/data-hero.png", // Hero image for case study
     year: "2025",
-    liveUrl: "https://xmyoladata.com/",
+    liveUrl: "https://datasabi.com/",
     type: "Fintech App",
-    role: "Lead Engineer / UI Designer",
+    role: "Founder & Developer",
     objective: "To empower individuals with cutting-edge financial technology by providing an instant, secure, and stress-free platform for airtime, data, electricity, and TV subscriptions.",
     process: "Developed by Veyrix Technologies with a focus on 99.9% uptime and real-time delivery speed, utilizing secure payment gateways to process over 15,000 daily transactions reliably.",
     features: [
@@ -31,7 +31,7 @@ export const projects = [
     year: "2026",
     liveUrl: "https://visitarewa.com/",
     type: "Open Source / Cultural Archive",
-    role: "Lead Engineer / UI Designer",
+    role: "Founder & Developer",
     objective: "To create a comprehensive digital tapestry that highlights Northern Nigeria’s ancient history, breathtaking landscapes (from Zuma Rock to Mambilla Plateau), and resilient people, serving as the 'Heart of Nigeria' to the world.",
     process: "Developed by Veyrix Technologies as an open-source initiative, the platform was built to function as a narrative-driven experience, integrating cultural storytelling with modern web performance to document Arewa's excellence.",
     features: [
@@ -52,7 +52,7 @@ export const projects = [
     year: "2026",
     //liveUrl: "https://scholaraid.com/",
     type: "Cross-Platform App (Mobile & Web)",
-    role: "UX Designer & Developer",
+    role: "Founder & Developer",
     objective: "To design and implement a scalable platform that simplifies scholarship discovery for students and streamlines manual workflows for providers[cite: 14, 19].",
     process: "Adopted an agile, iterative methodology using a Firebase-backed architecture to support real-time synchronization and cloud-native scalability[cite: 25, 26, 30].",
     features: [
