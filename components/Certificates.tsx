@@ -5,14 +5,19 @@ import SectionTitle from "./SectionTitle";
 
 const certificates = [
   {
-    name: "3MTT Program",
-    org: "Federal Government of Nigeria",
-    year: "2024",
-  },
-  {
     name: "Bridge for Billions Program",
     org: "Bridge for Billions",
     year: "2026",
+  },
+  {
+    name: "DFA Certified Software Developer",
+    org: "Tech4Dev",
+    year: "2025",
+  },
+   {
+    name: "3MTT Program",
+    org: "Federal Government of Nigeria",
+    year: "2024",
   },
 ];
 
