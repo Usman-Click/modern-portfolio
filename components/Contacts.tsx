@@ -6,6 +6,7 @@ import SectionTitle from "./SectionTitle";
 const contactLinks = [
   { name: "Mail", href: "mailto:usman@veyrixtech.com" },
   { name: "GitHub", href: "https://github.com/Usman-Click" },
+  { name: "Dribble", href: "https://dribbble.com/Usman_click" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/usman-click/" },
 ];
 
@@ -13,7 +14,6 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-28 px-8 pb-40 bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        
         {/* Left: Sticky Title */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -58,10 +58,10 @@ export default function Contact() {
           </div>
 
           {/* Location & Phone - Grouped Footer Style */}
-           {/* Copyright Footer */}
-      <div className="max-w-6xl mx-auto mt-32 text-white/50 text-[10px] uppercase tracking-[0.3em]">
-        © {new Date().getFullYear()} Usman Click. All rights reserved.
-      </div>
+          {/* Copyright Footer */}
+          <div className="max-w-6xl mx-auto mt-32 text-white/50 text-[10px] uppercase tracking-[0.3em]">
+            © {new Date().getFullYear()} Usman Click. All rights reserved.
+          </div>
           {/* <div className="pt-12 border-t border-white/5 grid grid-cols-2 gap-8">
             <div>
               <p className="text-white/20 uppercase tracking-[0.2em] text-[10px] mb-2">
@@ -78,8 +78,6 @@ export default function Contact() {
           </div> */}
         </motion.div>
       </div>
-
-     
     </section>
   );
 }
