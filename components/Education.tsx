@@ -7,9 +7,9 @@ import { Calendar, GraduationCap, MapPin } from "lucide-react";
 const education = [
   {
     degree: "BSc in Computer Science",
-    school: "University / Polytechnic",
-    location: "Nigeria",
-    year: "2019 - 2023",
+    school: "Federal University of Kashere",
+    location: "Gombe",
+    year: "2021 - 2025",
     highest: true,
     desc: "Focused on software engineering, algorithms, and system design. Graduated with a strong foundation in building scalable applications.",
   },

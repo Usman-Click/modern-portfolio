@@ -6,20 +6,38 @@ import { Calendar, Briefcase, MapPin } from "lucide-react"; // Or use your own i
 
 const work = [
   {
-    role: "Software Engineer",
-    company: "Promptto",
-    location: "Abuja",
+    role: "Product Designer",
+    company: "PromptTo AI Lab",
+    location: "Remote",
     year: "2024 - Present",
     current: true,
-    desc: "Building AI-powered software solutions, mobile applications, and automation systems.",
+    desc: "Leading the end-to-end design and architecture of AI-powered software and automation systems.",
+  },
+
+  {
+    role: "Founder & Lead Engineer",
+    company: "Veyrix Technologies",
+    location: "Abuja",
+    year: "2022 - Present",
+    current: true,
+    desc: "Leading the end-to-end development of cross-platform mobile and web applications, alongside native Android solutions.",
+  },
+
+  {
+    role: "Chief Technology Officer",
+    company: "Mile Star Limited",
+    location: "Gombe",
+    year: "2021 - 2024",
+    current: false,
+    desc: "Oversaw technical strategy and product roadmaps, ensuring scalable architecture and high-quality engineering standards.",
   },
   {
-    role: "Freelance Mobile Developer",
-    company: "Independent",
+    role: "UI/UX Designer Intern",
+    company: "Practicode Academy",
     location: "Remote",
-    year: "2022 - 2024",
+    year: "2022 - 2023",
     current: false,
-    desc: "Delivered Android apps, APIs integration, and UI/UX-driven product development.",
+    desc: "Transformed complex user problems into intuitive designs and validated prototypes through stakeholder feedback and UI audits.",
   },
 ];
 
@@ -27,7 +45,6 @@ export default function Work() {
   return (
     <section className="relative py-28 px-8 " id="work">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        
         {/* Left: Sticky Title */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -52,9 +69,7 @@ export default function Work() {
             >
               {/* Role & Badge */}
               <div className="flex items-center gap-3 mb-4">
-                <h3 className="text-xl font-semibold text-white">
-                  {job.role}
-                </h3>
+                <h3 className="text-xl font-semibold text-white">{job.role}</h3>
                 {job.current && (
                   <span className="px-3 py-1 rounded-md bg-white/5 border border-white/10 text-[#a38b7e] text-xs font-medium">
                     Current

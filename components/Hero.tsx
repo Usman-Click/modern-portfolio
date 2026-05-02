@@ -76,7 +76,7 @@ export default function Hero() {
             <div className="grid grid-cols-[100px_1fr] gap-x-12 gap-y-2 pb-8 border-b border-white/5">
               <p className="text-white font-semibold text-lg">About</p>
               <div className="space-y-1 text-white/50 text-lg leading-tight">
-                <p>Software Engineer</p>
+                <p>Software Engineer | Product Designer</p>
                 <p>Based in Nigeria</p>
                 <p>3+ Years Experience</p>
                 <p className="text-white/80">Open to Work</p>
