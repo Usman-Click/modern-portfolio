@@ -10,6 +10,13 @@ export default function ProjectPage() {
   const { id } = useParams();
   const router = useRouter();
   const [isImageHovered, setIsImageHovered] = useState(false);
+  const [copiedColor, setCopiedColor] = useState<string | null>(null);
+
+  const handleCopyColor = (color: string) => {
+    navigator.clipboard.writeText(color);
+    setCopiedColor(color);
+    setTimeout(() => setCopiedColor(null), 2000);
+  };
 
   const projectIndex = projects.findIndex((p) => p.id === id);
   const project = projects[projectIndex];
@@ -179,6 +186,77 @@ export default function ProjectPage() {
             ))}
           </ul>
         </div>
+
+        {/* --- DESIGN & STYLE GUIDE --- */}
+        {project.colors && project.fonts && (
+          <div className="pt-20 border-t border-white/10">
+            <h2 className="text-4xl font-bold mb-12">Design & Style Guide</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+              {/* Color Palette Swatches */}
+              <div>
+                <h3 className="text-xl font-semibold mb-6 text-white/90">
+                  Color Palette
+                </h3>
+                <p className="text-white/40 text-sm mb-6 leading-relaxed">
+                  Curated color system tailored for the target demographic and branding goals. Click a swatch to copy the HEX code.
+                </p>
+                <div className="flex flex-wrap gap-6">
+                  {project.colors.map((color, i) => (
+                    <button
+                      key={i}
+                      onClick={() => handleCopyColor(color)}
+                      className="group flex flex-col items-center gap-3 focus:outline-none cursor-pointer"
+                    >
+                      <div
+                        style={{ backgroundColor: color }}
+                        className="w-16 h-16 rounded-2xl border border-white/10 shadow-lg relative flex items-center justify-center transition-transform active:scale-95 duration-200"
+                      >
+                        {copiedColor === color && (
+                          <span className="absolute inset-0 bg-black/60 rounded-2xl flex items-center justify-center text-[10px] font-bold text-white uppercase tracking-wider">
+                            Copied!
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-xs font-mono text-white/50 group-hover:text-white transition-colors">
+                        {color}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Typography Preview */}
+              <div>
+                <h3 className="text-xl font-semibold mb-6 text-white/90">
+                  Typography
+                </h3>
+                <p className="text-white/40 text-sm mb-6 leading-relaxed">
+                  Typeface structure selected to ensure readability, hierarchy, and system compatibility.
+                </p>
+                <div className="space-y-6">
+                  {project.fonts.map((font, i) => (
+                    <div key={i} className="bg-white/5 border border-white/5 rounded-2xl p-6">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-xs font-mono text-white/40 uppercase tracking-widest">
+                          Font Family
+                        </span>
+                        <span className="text-sm font-semibold text-white">
+                          {font}
+                        </span>
+                      </div>
+                      <p className="text-2xl font-bold tracking-tight text-white mt-4">
+                        Aa Bb Cc 123
+                      </p>
+                      <p className="text-xs text-white/40 mt-1">
+                        System & Display Weights
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* --- NEXT PROJECT FOOTER --- */}

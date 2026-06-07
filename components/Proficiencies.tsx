@@ -31,7 +31,9 @@ export default function Proficiencies() {
               <p>API Design</p>
               <p>Frontend Architecture</p>
               <p>Backend Logic</p>
-              <p>UX and Layout</p>
+              <p>UI/UX Design</p>
+              <p>Product Design</p>
+              <p>System Architecture</p>
             </div>
           </motion.div>
 
@@ -48,10 +50,13 @@ export default function Proficiencies() {
             <p className="text-white/80 font-medium">Tools</p>
             <div className="text-white/50 leading-7">
               <p>VS Code</p>
-              <p>Figma</p>
+              <p>Antigravity</p>
               <p>Android Studio</p>
               <p>Adobe Illustrator</p>
+              <p>Figma</p>
               <p>Postman</p>
+              <p>Git</p>
+              <p>GitHub</p>
             </div>
           </motion.div>
 
@@ -67,16 +72,28 @@ export default function Proficiencies() {
           >
             <p className="text-white/80 font-medium">Tech Stack</p>
             <div className="text-white/50 leading-7">
-              <p>React</p>
-              <p>Next.js</p>
-              <p>TypeScript</p>
-              <p>TailwindCSS</p>
-              <p>Laravel</p>
-              <p>Flutter</p>
-              <p>Java</p>
-              <p>XML</p>
-              <p>Kotlin</p>
-              <p>Jetpack compose</p>
+              <div className="mb-4">
+                <p className="text-white/70 text-sm uppercase tracking-wider">Web</p>
+                <p>Next.js</p>
+                <p>React</p>
+                <p>TypeScript</p>
+                <p>Tailwind CSS</p>
+              </div>
+
+              <div className="mb-4">
+                <p className="text-white/70 text-sm uppercase tracking-wider">Mobile</p>
+                <p>Flutter</p>
+                <p>Kotlin</p>
+                <p>Jetpack Compose</p>
+                <p>Java</p>
+              </div>
+
+              <div>
+                <p className="text-white/70 text-sm uppercase tracking-wider">Backend</p>
+                <p>Laravel</p>
+                <p>Firebase</p>
+                <p>Supabase</p>
+              </div>
             </div>
           </motion.div>
         </div>
