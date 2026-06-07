@@ -61,5 +61,26 @@ export const projects = [
       "Automated Provider Dashboards [cite: 31, 39]",
       "Real-time Push Notifications [cite: 40]"
     ]
+  },
+  {
+    id: "birthtrck",
+    name: "BirthTrck",
+    desc: "A beautiful automated birthday tracking & greeting delivery dashboard.",
+    icon: "/images/birth.png",
+    image: "/images/birth-hero.jpg",
+    year: "2026",
+    liveUrl: "https://birthtrck.vercel.app/",
+    type: "Web App / Dashboard",
+    role: "Founder & Developer",
+    objective: "To design a reliable, private, and automated platform for scheduling personal greetings (Email/SMS) for birthdays and key milestones, ensuring you never miss a loved one's special day.",
+    process: "Created a Next.js responsive app with custom-built glassmorphism design tokens. Leveraged local storage for data synchronization, engineered an intuitive visual scheduler, and optimized responsive layouts for mobile and desktop screens.",
+    features: [
+      "Automated SMS & Email Greeting Delivery",
+      "Interactive Calendar Event Mapping",
+      "Fluid Glassmorphism Responsive UI",
+      "Localized Data Synchronization & Persistence",
+      "Smart Greeting Template Customizer",
+      "Quick Add and Bookmarking Flow"
+    ]
   }
 ];
