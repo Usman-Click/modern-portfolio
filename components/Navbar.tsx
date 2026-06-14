@@ -55,11 +55,11 @@ export default function Navbar() {
 
         <div className="max-w-6xl mx-auto px-8 py-4 flex items-center justify-between">
           <a
-            href="/docs/work_samples.pdf"
+            href="/docs/cv.pdf"
             target="_blank"
             className="text-sm text-white/60 tracking-wide"
           >
-            Usman's Work Samples
+            Usman's Resume
           </a>
 
           <button
