@@ -90,6 +90,7 @@ export default function Proficiencies() {
 
               <div>
                 <p className="text-white/70 text-sm uppercase tracking-wider">Backend</p>
+                <p>Next.js</p>
                 <p>Laravel</p>
                 <p>Firebase</p>
                 <p>Supabase</p>

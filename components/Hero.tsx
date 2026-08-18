@@ -2,94 +2,167 @@
 
 import { motion } from "framer-motion";
 import SectionTitle from "./SectionTitle";
+import { GitBranch, X } from "lucide-react";
+import { FiGithub, FiInstagram, FiLinkedin, FiTwitter, FiX } from "react-icons/fi";
 
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative mt-24 sm:mt-0 min-h-screen flex items-center justify-center px-8  overflow-hidden"
-    >
-      {/* --- GLOBAL GRID BACKGROUND PATTERN --- */}
+    <section id="hero" className="relative py-16 px-8 overflow-hidden">
+      {/* --- GRID BACKGROUND PATTERN --- */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.15]"
+        className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           backgroundImage: `
-            linear-gradient(to right, #333 1px, transparent 1px),
-            linear-gradient(to bottom, #333 1px, transparent 1px)
+            linear-gradient(to right, #777 3px, transparent 3px),
+            linear-gradient(to bottom, #777 3px, transparent 3px)
           `,
-          backgroundSize: "80px 80px",
+          backgroundSize: "70px 70px",
           maskImage:
-            "radial-gradient(circle at center, black, transparent 90%)",
+            "radial-gradient(ellipse at center, black, transparent 80%)",
           WebkitMaskImage:
-            "radial-gradient(circle at center, black, transparent 90%)",
+            "radial-gradient(ellipse at center, black, transparent 80%)",
         }}
       />
 
-      <div className="relative max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        {/* Left Side: Large Header */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="text-center sm:text-start"><SectionTitle title="Usman Adamu H." /></div>
-        </motion.div>
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-start md:items-center">
+          {/* Left Side: Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="space-y-8"
+          >
+            {/* Title */}
+            <div>
+              <SectionTitle title="Usman Adamu Haruna" />
 
-        {/* Right Side: Profile & Details */}
-        <motion.div
-          className="flex flex-col items-center md:items-start"
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {/* Profile Image with its own Grid Overlay */}
-          <div className="relative p-8 mb-12">
-            {/* Decorative grid behind the image */}
-            <div className="absolute inset-0  grid grid-cols-4 grid-rows-4 opacity-20">
-              {[...Array(16)].map((_, i) => (
-                <div key={i} className="border-[0.5px] border-white/10" />
+              {/* Tagline */}
+              <p className="text-lg text-white/60 mt-4 leading-relaxed">
+                Full-stack Software Engineer & Product Designer crafting
+                beautiful, scalable digital experiences
+              </p>
+            </div>
+
+            {/* Stats/Badges */}
+            <div className="flex flex-wrap gap-3">
+              {[
+                { label: "5+", value: "Projects Shipped" },
+                { label: "3+", value: "Years Experience" },
+                { label: "Nigeria", value: "Based" },
+              ].map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 + idx * 0.1 }}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-white/20 transition-colors"
+                >
+                  <span className="text-white font-semibold">{stat.label}</span>
+                  <span className="text-white/50 text-sm">{stat.value}</span>
+                </motion.div>
               ))}
             </div>
 
-            {/* The "Blueprint" Grid behind the photo */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                backgroundImage: `
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-3 pt-4">
+              <motion.a
+                href="#projects"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="px-6 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white/90 transition-colors"
+              >
+                View My Work
+              </motion.a>
+              <motion.a
+                href="/docs/cv.pdf"
+                target="_blank"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/5 transition-colors"
+              >
+                Download Resume
+              </motion.a>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-6 pt-4">
+              {[
+              //  { icon: FiInstagram, href: "https://twitter.com" },
+                { icon: FiGithub, href: "https://github.com/Usman-Click" },
+                { icon: FiLinkedin, href: "https://www.linkedin.com/in/usman-click/" },
+              ].map((social, idx) => {
+                const Icon = social.icon;
+
+                return (
+                  <motion.a
+                    key={idx}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 + idx * 0.1 }}
+                    className="text-white/60 hover:text-white transition-colors text-lg"
+                  >
+                    <Icon size={20} />
+                  </motion.a>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Right Side: Profile & Details */}
+          <motion.div
+            className="flex flex-col items-center md:items-start gap-8"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            {/* Profile Image */}
+            <div className="relative">
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  backgroundImage: `
                   linear-gradient(to right, #111 1px, transparent 1px),
                   linear-gradient(to bottom, #111 1px, transparent 1px)
                 `,
-                backgroundSize: "20px 20px",
-              }}
-            />
-            <div className="relative w-40 h-52 rounded-3xl overflow-hidden border border-white/10 shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
-              <img
-                src="/images/me.webp"
-                alt="Profile"
-                className="w-full h-full object-cover  transition-all duration-700"
+                  backgroundSize: "20px 20px",
+                }}
               />
-            </div>
-          </div>
-
-          {/* Details Table-style Layout */}
-          <div className="w-full max-w-md">
-            <div className="grid grid-cols-[100px_1fr] gap-x-12 gap-y-2 pb-8 border-b border-white/5">
-              <p className="text-white font-semibold text-lg">About</p>
-              <div className="space-y-1 text-white/50 text-lg leading-tight">
-                <p>Software Engineer | Product Designer</p>
-                <p>Based in Nigeria</p>
-                <p>3+ Years Experience</p>
-                <p className="text-white/80">Open to Work</p>
+              <div className="relative w-48 h-56 rounded-2xl overflow-hidden border border-white/10 shadow-2xl hover:shadow-white/10 transition-shadow duration-500">
+                <img
+                  src="/images/me.png"
+                  alt="Usman Adamu"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
-            {/* Bio Paragraph */}
-            <p className="text-white/40 text-lg leading-relaxed mt-8">
-              When I’m not coding, I’m building startup ideas, exploring AI
-              systems, or working on premium UI experiences.
-            </p>
-          </div>
-        </motion.div>
+            {/* About Info Card */}
+            <div className="w-full max-w-md space-y-6">
+              {/* Skills Preview */}
+              <div className="space-y-3">
+                <p className="text-white/80 font-semibold text-sm uppercase tracking-wide">
+                  About
+                </p>
+                <p className="text-white/50 text-base leading-relaxed">
+                  When I'm not coding, I'm building startup ideas, exploring AI
+                  systems, or working on minimalist UI experiences.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

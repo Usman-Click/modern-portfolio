@@ -1,14 +1,34 @@
-export const projects = [
+export type ProjectCategory = "Web Apps" | "Mobile" | "Product Design";
+
+export type Project = {
+  id: string;
+  name: string;
+  desc: string;
+  icon: string;
+  image?: string;
+  year?: string;
+  liveUrl?: string;
+  type?: string;
+  category: ProjectCategory;
+  role?: string;
+  objective?: string;
+  process?: string;
+  features?: string[];
+  colors?: string[];
+  fonts?: string[];
+};
+
+export const projects: Project[] = [
   {
     id: "datasabi",
     name: "DataSabi",
     desc: "Reinventing VTU and financial technology",
     icon: "/images/data.png",
-    image: "/images/data-hero.png", // Hero image for case study
+    image: "/images/data-hero.png",
     year: "2025",
     liveUrl: "https://datasabi.com/",
     type: "Fintech App",
-    category: "Fintech & Telecom Application",
+    category: "Web Apps",
     role: "Founder & Developer",
     objective: "To empower individuals with cutting-edge financial technology by providing an instant, secure, and stress-free platform for airtime, data, electricity, and TV subscriptions.",
     process: "Developed by Veyrix Technologies with a focus on 99.9% uptime and real-time delivery speed, utilizing secure payment gateways to process over 15,000 daily transactions reliably.",
@@ -32,7 +52,7 @@ export const projects = [
     year: "2026",
     liveUrl: "https://visitarewa.com/",
     type: "Open Source / Cultural Archive",
-    category: "Cultural Archive & Travel Platform",
+    category: "Web Apps",
     role: "Founder & Developer",
     objective: "To create a comprehensive digital tapestry that highlights Northern Nigeria’s ancient history, breathtaking landscapes (from Zuma Rock to Mambilla Plateau), and resilient people, serving as the 'Heart of Nigeria' to the world.",
     process: "Developed by Veyrix Technologies as an open-source initiative, the platform was built to function as a narrative-driven experience, integrating cultural storytelling with modern web performance to document Arewa's excellence.",
@@ -56,7 +76,7 @@ export const projects = [
     year: "2026",
     liveUrl: "https://scholaraid.com/",
     type: "Cross-Platform App (Mobile & Web)",
-    category: "EdTech & Scholarship Dashboard",
+    category: "Mobile",
     role: "Founder & Developer",
     objective: "To design and implement a scalable platform that simplifies scholarship discovery for students and streamlines manual workflows for providers.",
     process: "Adopted an agile, iterative methodology using a Firebase-backed architecture to support real-time synchronization and cloud-native scalability.",
@@ -78,7 +98,7 @@ export const projects = [
     year: "2026",
     liveUrl: "https://birthtrck.vercel.app/",
     type: "Web App / Dashboard",
-    category: "SaaS Dashboard & Automation",
+    category: "Web Apps",
     role: "Founder & Developer",
     objective: "To design a reliable, private, and automated platform for scheduling personal greetings (Email/SMS) for birthdays and key milestones, ensuring you never miss a loved one's special day.",
     process: "Created a Next.js responsive app with custom-built glassmorphism design tokens. Leveraged local storage for data synchronization, engineered an intuitive visual scheduler, and optimized responsive layouts for mobile and desktop screens.",
@@ -102,7 +122,7 @@ export const projects = [
     year: "2024",
     liveUrl: "https://novetiv.com/",
     type: "Technology Company",
-    category: "AI, Robotics & Software Development",
+    category: "Web Apps",
     role: "Co-Founder & Product Designer",
     objective: "To build innovative AI and software solutions that help businesses automate processes and accelerate growth.",
     process: "Led product design, user experience strategy, design systems, wireframing, prototyping, and visual identity development while collaborating closely with engineering and business teams.",
@@ -116,5 +136,30 @@ export const projects = [
     ],
     colors: ["#0F172A", "#2563EB", "#14B8A6"],
     fonts: ["Inter", "Plus Jakarta Sans"]
+  }
+];
+
+export type Portfolio = {
+  id: string;
+  name: string;
+  desc: string;
+  icon: string;
+  url: string;
+};
+
+export const portfolios: Portfolio[] = [
+  {
+    id: "dribbble",
+    name: "Dribbble",
+    desc: "Explore my UI/UX design work, visual design projects, and design explorations.",
+    icon: "/images/dribble.png",
+    url: "https://dribbble.com/Usman_click"
+  },
+  {
+    id: "behance",
+    name: "Behance",
+    desc: "Check out my complete design portfolio, case studies, and creative projects.",
+    icon: "/images/behance.png",
+    url: "https://www.behance.net/usmanuah"
   }
 ];

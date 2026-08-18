@@ -5,6 +5,11 @@ import SectionTitle from "./SectionTitle";
 
 const certificates = [
   {
+    name: "Data Protection Officer (DPO)",
+    org: "Nigeria Data Protection Commission – NDPC",
+    year: "2026",
+  },
+  {
     name: "Bridge for Billions Program",
     org: "Bridge for Billions",
     year: "2026",
@@ -14,10 +19,15 @@ const certificates = [
     org: "Tech4Dev",
     year: "2025",
   },
-   {
-    name: "3MTT Program",
-    org: "Federal Government of Nigeria",
+  {
+    name: "3MTT Certified Software Developer",
+    org: "3MTT, Federal Government of Nigeria",
     year: "2024",
+  },
+  {
+    name: "UI/UX Designer Intern",
+    org: "Practicode Academy",
+    year: "2023",
   },
 ];
 
